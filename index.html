@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<h1>Task List</h1>
+
+<!-- Categories Section -->
+<label for="category-filter">Filter by Category:</label>
+<input type="checkbox" id="category-work" name="category" value="work" checked>
+<label for="category-work">Work</label>
+<input type="checkbox" id="category-personal" name="category" value="personal" checked>
+<label for="category-personal">Personal</label>
+<input type="checkbox" id="category-other" name="category" value="other" checked>
+<label for="category-other">Other</label>
+
+<!-- Tasks Section -->
+<div id="tasks">
+    <!-- Tasks will be dynamically added here -->
+</div>
+
+<script>
+    // Initial display of tasks
+    displayTasks(tasks);
+
+    // Attach event listener to category checkboxes
+    document.querySelectorAll('input[name="category"]').forEach(checkbox => {
+        checkbox.addEventListener('change', filterTasks);
+    });
+</script>
+
+</body>
+</html>
