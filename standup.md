@@ -19,7 +19,11 @@
 3. user chose color and background preference
 4. when complete one task, delete task right away
 5. section for user input task
+6. max number of tasks --> 512 to prevent spam
 
 ##Action Items
-- [ ] Add something here
+- [ ] SWOT Analysis
+- [ ] Documentation
+- [ ] Testing
+- [ ] Feature Implementations (see issues)
 
