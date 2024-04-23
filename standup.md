@@ -21,6 +21,7 @@
 5. section for user input task
 6. max number of tasks --> 512 to prevent spam
 7. reset button
+8. insert new tasks
 
 **TODO List By Friday 12:pm**
 - [ ] SWOT Analysis
