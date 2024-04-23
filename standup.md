@@ -21,7 +21,7 @@
 5. section for user input task
 6. max number of tasks --> 512 to prevent spam
 
-##Action Items
+##Action Items##
 - [ ] SWOT Analysis
 - [ ] Documentation
 - [ ] Testing
