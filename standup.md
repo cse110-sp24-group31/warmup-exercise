@@ -20,8 +20,9 @@
 4. when complete one task, delete task right away
 5. section for user input task
 6. max number of tasks --> 512 to prevent spam
+7. reset button
 
-##Action Items##
+**TODO List By Friday 12:pm**
 - [ ] SWOT Analysis
 - [ ] Documentation
 - [ ] Testing
