@@ -1,5 +1,6 @@
 **Meeting Notes**\
-Attendees: Nikhil, Kevin, Charlotte, Newton
+**Time:** 4/23 3:00pm-5:00pm
+**Attendees:** Nikhil, Kevin, Charlotte, Newton\
 
 **Ideas On How We Can Improve:**
 1. change default color palette
