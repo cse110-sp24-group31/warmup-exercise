@@ -3,3 +3,5 @@
 # Issues Encountered
 
 # Feature additions
+
+# SWOT Analysis
