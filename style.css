@@ -18,7 +18,15 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
+.side-section{
+    display: flex;
+    flex-direction: column;
+    
+aside {
+    background-color: lightgreen;
+    padding: 10px;
+    margin-bottom: 10px; 
+}
 /* Styles for Categories */
 .categories {
     flex: 0 0 15%; /* 45% width */
