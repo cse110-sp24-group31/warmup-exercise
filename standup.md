@@ -1,4 +1,4 @@
-**Meeting Notes**
+**Meeting Notes**\
 Attendees: Nikhil, Kevin, Charlotte, Newton
 
 **Ideas On How We Can Improve:**
