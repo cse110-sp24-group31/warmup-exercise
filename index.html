@@ -49,6 +49,20 @@
     
     fetchTasks();
 </script>
-
+    <aside>
+        <form>
+            <fieldset>
+                <legend>Input Task</legend>
+                <label for="task-type">Task Type:</label>
+                <select id="task-type" name="task-type">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Other">Other</option>
+                </select><br>
+                <label for="task">Task Description:</label>
+                <textarea id="task" name="task" rows="10" cols="10"></textarea><br>
+            </fieldset>
+        </form>
+    </aside>
 </body>
 </html>
