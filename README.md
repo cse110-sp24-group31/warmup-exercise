@@ -5,3 +5,7 @@
 # Feature additions
 
 # SWOT Analysis
+Strengths: Flexible, streamilined visualization, customizable, user friendly
+Weakness: Can only represent 1 week up to 512 tasks at a time.
+Opportunity: Could become a competitive app on the market and popularize these features in task managers
+Threat: People could try to spam too many tasks and crash the app. To resolve, we set a limit on the number of tasks to 512.
