@@ -1,0 +1,6 @@
+[
+    { "name": "Schedule meeting", "category": "work" },
+    { "name": "Do laundry", "category": "personal" },
+    { "name": "Wash dishes", "category": "personal" },
+    { "name": "File taxes", "category": "other" }
+]
