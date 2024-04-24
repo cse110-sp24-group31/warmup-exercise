@@ -26,8 +26,12 @@ body {
 aside {
     flex: 0 0 15%;
     background-color: lightgreen;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
     padding: 10px;
-    margin-bottom: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
+    margin-bottom: 15px; 
+    padding-top: 10px;
 }
 /* Styles for Categories */
 .categories {
