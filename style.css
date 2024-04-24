@@ -23,7 +23,7 @@ body {
     flex-direction: column;
 }
     
-aside {
+form.container{
     flex: 0 0 15%;
     background-color: lightgreen;
     border: 2px solid darkgreen;
