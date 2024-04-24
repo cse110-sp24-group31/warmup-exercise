@@ -40,16 +40,18 @@ aside {
 }
 .categories-title {
     font-weight: bold;
+    font-size: 24 px;
     margin-bottom: 5px;
 }
 .category {
     display: block;
+    
     margin-bottom: 5px;
 }
 
 /* Styles for Task List */
 .task-list {
-    flex: 0 0 45%; /* Adjusted width to fit the layout */
+    flex: 1;
     background-color: #ADD8E6; /* Light blue background */
     border: 2px solid #00008B; /* Dark blue border */
     border-radius: 10px; /* Rounded borders */
