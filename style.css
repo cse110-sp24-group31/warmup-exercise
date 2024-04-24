@@ -21,6 +21,7 @@ body {
 .side-section{
     display: flex;
     flex-direction: column;
+}
     
 aside {
     flex: 0 0 15%;
