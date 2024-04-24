@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     
 aside {
+    flex: 0 0 15%;
     background-color: lightgreen;
     padding: 10px;
     margin-bottom: 10px; 
