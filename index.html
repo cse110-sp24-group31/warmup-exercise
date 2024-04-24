@@ -1,75 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task List</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
 
     <h1>Task List</h1>
-<div class="container">
-    <div class="side-section">
-        <!-- Categories Section -->
-        <div class="categories">
-            <div class="categories-title">Categories</div>
-            <label class="category" for="category-work">
-                <input type="checkbox" id="category-work" name="category" value="work" checked>
-                Work
-            </label>
-            <label class="category" for="category-personal">
-                <input type="checkbox" id="category-personal" name="category" value="personal" checked>
-                Personal
-            </label>
-            <label class="category" for="category-other">
-                <input type="checkbox" id="category-other" name="category" value="other" checked>
-                Other
-            </label>
-        </div>
-        
-        <aside>
-                <form>
+    <div class="container">
+        <div class="side-section">
+            <!-- Categories Section -->
+            <div class="categories">
+                <div class="categories-title">Categories</div>
+                <label class="category" for="category-work">
+                    <input type="checkbox" id="category-work" name="category" value="work" checked>
+                    Work
+                </label>
+                <label class="category" for="category-personal">
+                    <input type="checkbox" id="category-personal" name="category" value="personal" checked>
+                    Personal
+                </label>
+                <label class="category" for="category-other">
+                    <input type="checkbox" id="category-other" name="category" value="other" checked>
+                    Other
+                </label>
+            </div>
+
+            <aside>
+                <form id="task-input" action="script.js">
                     <fieldset>
                         <legend style="font-size: 20px;">Input Task</legend>
                         <label for="task-type">Task Type:</label>
-                        <select id="task-type" name="task-type">
-                            <option value="Work">Work</option>
-                            <option value="Personal">Personal</option>
-                            <option value="Other">Other</option>
+                        <select id="task-type" name="category">
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="other">Other</option>
                         </select><br>
                         <label for="task">Task Description:</label><br>
-                        <textarea id="task" name="task" rows="5" cols="20" style="background-color: lightblue;"></textarea><br>
+                        <textarea id="task" name="task" rows="5" cols="20"
+                            style="background-color: lightblue;"></textarea><br>
+                        <label for="deadline">Deadline:</label><br>
+                        <input id="deadline" type="datetime-local" value="2024-04-23T19:30" /> <br>
+                        <label for="Priority">Task Priority:</label>
+                        <select id="Priority" name="Priority">
+                            <option value=0>Low Priority</option>
+                            <option value=1 selected>Normal Priority</option>
+                            <option value=2>High Priority</option>
+                        </select><br>
                         <div style="text-align: center;">
                             <input type="submit" value="Submit">
                         </div>
                     </fieldset>
                 </form>
-        </aside>
-    </div>
-    
-    <!-- Tasks Section -->
-    <div class="task-list" id="tasks">
-        <!-- Tasks will be added here -->
-    </div>
-</div>
+            </aside>
+        </div>
 
+        <!-- Tasks Section -->
+        <div class="task-list" id="tasks">
+            <!-- Tasks will be added here -->
+        </div>
+    </div>
 
-<script>
-    // Attach event listener to category checkboxes
-    document.querySelectorAll('input[name="category"]').forEach(checkbox => {
-        checkbox.addEventListener('change', fetchTasks);
-    });
-    
-    fetchTasks();
-</script>
+    <script src="script.js"></script>
+
+    <script>
+        // Attach event listener to category checkboxes
+        document.querySelectorAll('input[name="category"]').forEach(checkbox => {
+            checkbox.addEventListener('change', fetchTasks);
+        });
+
+        fetchTasks();
+    </script>
+
 </body>
+
 </html>
