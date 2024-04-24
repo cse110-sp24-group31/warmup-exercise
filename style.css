@@ -22,8 +22,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-    
-aside{
+form{
     flex: 0 0 15%;
     background-color: lightgreen;
     border: 2px solid darkgreen;
