@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task List</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="script.js"></script>
@@ -17,26 +17,44 @@
 
     <h1>Task List</h1>
 <div class="container">
-    
-    <!-- Categories Section -->
-    <div class="categories">
-        <div class="categories-title">Categories</div>
-        <label class="category" for="category-work">
-            <input type="checkbox" id="category-work" name="category" value="work" checked>
-            Work
-        </label>
-        <label class="category" for="category-personal">
-            <input type="checkbox" id="category-personal" name="category" value="personal" checked>
-            Personal
-        </label>
-        <label class="category" for="category-other">
-            <input type="checkbox" id="category-other" name="category" value="other" checked>
-            Other
-        </label>
-    </div>
-    
+    <div class="side-section"
+        <!-- Categories Section -->
+        <div class="categories style="float: left;">
+            <div class="categories-title">Categories</div>
+            <label class="category" for="category-work">
+                <input type="checkbox" id="category-work" name="category" value="work" checked>
+                Work
+            </label>
+            <label class="category" for="category-personal">
+                <input type="checkbox" id="category-personal" name="category" value="personal" checked>
+                Personal
+            </label>
+            <label class="category" for="category-other">
+                <input type="checkbox" id="category-other" name="category" value="other" checked>
+                Other
+            </label>
+        </div>
+        <aside style="float: left; margin-left: 20px;">
+            <form style="background-color: lightgreen;">
+                <fieldset>
+                    <legend style="font-size: 20px;">Input Task</legend>
+                    <label for="task-type">Task Type:</label>
+                    <select id="task-type" name="task-type">
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Other">Other</option>
+                    </select><br>
+                    <label for="task">Task Description:</label><br>
+                    <textarea id="task" name="task" rows="5" cols="20" style="background-color: lightblue;"></textarea><br>
+                    <div style="text-align: center;">
+                        <input type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </form>
+        </aside>
+    </div>    
     <!-- Tasks Section -->
-    <div class="task-list" id="tasks">
+    <div class="task-list" id="tasks" style="clear: both;">
         <!-- Tasks will be added here -->
     </div>
 </div>
@@ -49,6 +67,5 @@
     
     fetchTasks();
 </script>
-
 </body>
 </html>
