@@ -1,6 +1,20 @@
 [
-    { "name": "Schedule meeting", "category": "work" },
-    { "name": "Do laundry", "category": "personal" },
-    { "name": "Wash dishes", "category": "personal" },
-    { "name": "File taxes", "category": "other" }
+  {
+    "category": "work",
+    "task": "Schedule meeting",
+    "Priority": "1",
+    "deadline": "2024-02-23T19:30"
+  },
+  {
+    "category": "personal",
+    "task": "Do laundry",
+    "Priority": "1",
+    "deadline": "2024-03-23T19:30"
+  },
+  {
+    "category": "other",
+    "task": "File taxes",
+    "Priority": "2",
+    "deadline": "2024-04-21T12:30"
+  }
 ]
