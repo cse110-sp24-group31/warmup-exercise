@@ -29,3 +29,11 @@ function displayTasks(tasks) {
         tasksContainer.appendChild(taskElement);
     });
 }
+
+//function to reset the task list client side only (not removing actual JSON objects, only ones stored in JS/page)
+function resetTaskList(){
+    const tasksContainer = document.getElementById('tasks');
+    tasksContainer.innerHTML = ''; // Clears all tasks from the UI
+    console.log("Task list has been reset.");
+}
+

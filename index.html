@@ -22,6 +22,8 @@
         <!-- Categories Section -->
         <div class="categories">
             <div class="categories-title">Categories</div>
+            <!-- Reset Button - will call JS function onclick -->
+            <button id="resetbutton" onclick="if (confirm('Are you sure?')) resetTaskList()" onclick="resetTaskList()">Remove All Tasks</button>
             <label class="category" for="category-work">
                 <input type="checkbox" id="category-work" name="category" value="work" checked>
                 Work
