@@ -22,16 +22,45 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 form{
-    flex: 0 0 15%;
-    background-color: lightgreen;
-    border: 2px solid darkgreen;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
-    margin-bottom: 15px; 
-    padding-top: 10px;
+  flex: 0 0 15%;
+  background-color: lightgreen;
+  border: 2px solid darkgreen;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
+  margin-bottom: 15px; 
+  padding-top: 10px;
 }
+/* Styles for the Delete Task Fieldset */
+ .delete-task{
+  flex: 0 0 15%;
+  background-color: #ffcccc; 
+  border: 2px solid #ff7777; 
+  color: #333; 
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px; /* Spacing from the previous elements */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow as other sections */
+  margin-bottom: 15px; 
+  
+}
+
+aside fieldset button {
+  background-color: #e60000; 
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+aside fieldset button:hover {
+  background-color: #cc0000; 
+}
+
 /* Styles for Categories */
 .categories {
     flex: 0 0 15%; /* 45% width */

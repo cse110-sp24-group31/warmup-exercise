@@ -51,9 +51,25 @@
                         <div style="text-align: center;">
                             <input type="submit" value="Submit">
                         </div>
+                        
                     </fieldset>
                 </form>
         </aside>
+        <aside>
+            <form class="delete-task">
+            <fieldset class="delete-task">
+                <legend style="font-size: 20px;">Delete Task</legend>
+                <label for="task-id">Select Task to Delete:</label>
+                <select id="task-id" name="task-id">
+                    <!-- Dynamically filled with tasks -->
+                </select><br>
+                <div style="text-align: center;">
+                    <button type="button" onclick="deleteSelectedTask()">Delete Task</button>
+                </div>
+            </fieldset>
+        </form>
+        </aside>
+ 
     </div>
     
     <!-- Tasks Section -->
