@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
 
+    <h1>Task List</h1>
+<div class="container">
+    <div class="side-section">
+        <!-- Categories Section -->
+        <div class="categories">
+            <div class="categories-title">Categories</div>
+            <label class="category" for="category-Work">
+                <input type="checkbox" id="category-Work" name="category" value="Work" checked>
+                Work
+            </label>
+            <label class="category" for="category-Personal">
+                <input type="checkbox" id="category-Personal" name="category" value="Personal" checked>
+                Personal
+            </label>
+            <label class="category" for="category-Other">
+                <input type="checkbox" id="category-Other" name="category" value="Other" checked>
+                Other
+            </label>
+        </div>
+        
+        
+        <aside>
+                <form>
+                    <fieldset>
+                        <legend style="font-size: 20px;">Input Task</legend>
+                        <label for="task-type">Task Type:</label>
+                        <select id="task-type" name="task-type">
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Other">Other</option>
+                        </select><br>
+                        <label for="task">Task Description:</label><br>
+                        <textarea id="task" name="task" rows="5" cols="20" style="background-color: #ffffea;"></textarea><br>
+                        <div style="text-align: center;">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </fieldset>
+                </form>
+        </aside>
+    </div>
+    
+    <!-- Tasks Section -->
+    <div class="task-list" id="tasks">
+        <div id="Work-tasks" class="tasks-column">
+            <h2>Work</h2>
+            <ul></ul>
+        </div>
+        <div id="Personal-tasks" class="tasks-column">
+            <h2>Personal</h2>
+            <ul></ul>
+        </div>
+        <div id="Other-tasks" class="tasks-column">
+            <h2>Other</h2>
+            <ul></ul>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+<script>
+    // Attach event listener to category checkboxes
+    document.querySelectorAll('input[name="category"]').forEach(checkbox => {
+        checkbox.addEventListener('change', fetchTasks);
+    });
+    
+    fetchTasks();
+</script>
+</body>
+</html>
