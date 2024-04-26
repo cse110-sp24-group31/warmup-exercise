@@ -1,14 +1,3 @@
-
-let tasks = [];
-
-async function fetchTasks() {
-    try {
-        const response = await fetch('tasks.json'); // Fetch JSON file
-        tasks = await response.json(); // Parse JSON response
-        displayTasks(tasks); // Display tasks
-    } catch (error) {
-        console.error('Error fetching tasks:', error);
-    }
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('input[name="category"]').forEach(checkbox => {
         checkbox.addEventListener('change', function() {
@@ -20,14 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-}
-
-//function to reset the task list client side only (not removing actual JSON objects, only ones stored in JS/page)
-function resetTaskList(){
-    const tasksContainer = document.getElementById('tasks');
-    tasksContainer.innerHTML = ''; // Clears all tasks from the UI
-    console.log("Task list has been reset.");
-}
 
     document.querySelectorAll('.tasks-column').forEach(column => {
         column.style.display = 'none';
@@ -61,11 +42,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
         document.getElementById('task').value = '';
     });
-}
-
-function deleteTask(taskName){
-    tasks = tasks.filter(task => task.name != taskName);
-    displayTasks(tasks);
-}
 });
+
 
