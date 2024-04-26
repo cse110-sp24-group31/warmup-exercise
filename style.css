@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: #f0f0f0; 
 }
 
 /* Container styles */
@@ -14,7 +14,7 @@ body {
   width: 80%;
   min-width: 400px;
   max-width: 1100px;
-  margin: 20px auto; /* Center the container */
+  margin: 20px auto; 
   display: flex;
   justify-content: space-between;
 }
@@ -24,27 +24,16 @@ body {
 }
 
 form{
-flex: 0 0 15%;
-background-color: lightgreen;
-border: 2px solid darkgreen;
-border-radius: 10px;
-padding: 10px;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
-margin-bottom: 15px; 
-padding-top: 10px;
-}
 /* Styles for the Delete Task Fieldset */
 .delete-task{
 flex: 0 0 15%;
-background-color: #ffcccc; 
-border: 2px solid #ff7777; 
+background-color: #F7E0AC; 
+border: 2px solid darkblue; 
 color: #333; 
 border-radius: 10px;
 padding: 10px;
-margin-top: 10px; /* Spacing from the previous elements */
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow as other sections */
-margin-bottom: 15px; 
-
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+margin: 3px;
 }
 
 aside fieldset button {
@@ -63,39 +52,81 @@ background-color: #cc0000;
 
 /* Styles for Categories */
 .categories {
-  flex: 0 0 15%; /* 45% width */
-  background-color: #FFDAB9; /* Light orange background */
-  border: 2px solid #FFA500; /* Dark orange border */
-  border-radius: 10px; /* Rounded borders */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
-  padding: 10px; /* Add padding for spacing */
+  flex: 0 0 15%; 
+  background-color: #FFDAB9; 
+  border: 2px solid darkblue; 
+  border-radius: 10px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  padding-left: 15px;
+  margin: 3px;
 }
 .categories-title {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 5px;
+  text-align: center;
 }
+
 .category {
   display: block;
-  
   margin-bottom: 5px;
+}
+.hidden {
+  display: none;
 }
 
 /* Styles for Task List */
 .task-list {
   flex: 1;
-  background-color: #ADD8E6; /* Light blue background */
-  border: 2px solid #00008B; /* Dark blue border */
-  border-radius: 10px; /* Rounded borders */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
-  padding: 10px; /* Add padding for spacing */
-  min-height: 800px;
-  margin-right: 20px; /* Add margin for spacing */
-}
 
 .task {
   margin-bottom: 10px;
+  background-color: #FCD4A1; 
+  border: 2px solid black; 
+  border-radius: 10px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 10px; 
+  min-height: 800px; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  align-items: start; 
 }
+
+.task-list > div {
+  min-width: 0; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+  padding: 10px;
+  border: 2px solid #FFEF6A; 
+  border-radius: 10px; 
+  background-color: #FFF6AD; 
+}
+#Work-tasks {
+  background-color: #FF6347;
+  border-color: #FF6347; 
+  color: #FFFFFF; 
+}
+
+#Personal-tasks {
+  background-color: #4682B4; 
+  border-color: #4682B4; 
+  color: #FFFFFF; 
+}
+
+#Other-tasks {
+  background-color: #32CD32; 
+  border-color: #32CD32; 
+  color: #FFFFFF; 
+}
+.tasks-column h2 {
+  width: 100%;
+  text-align: center; 
+  margin-top: 0; 
+  margin-bottom: 20px; 
+}
+
 
 h1 {
   text-align: center;
@@ -111,7 +142,7 @@ body {
 
 .bg {
   animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  background-image: linear-gradient(-60deg, #ead081 50%, #eabb81 50%);
   bottom:0;
   left:-50%;
   opacity:.5;
@@ -144,7 +175,16 @@ body {
 }
 
 h1 {
-  font-family:monospace;
+.categories label[for="category-Work"] {
+  color: #FF6347; 
+}
+
+.categories label[for="category-Personal"] {
+  color: #4682B4; 
+}
+
+.categories label[for="category-Other"] {
+  color: #32CD32; 
 }
 
 @keyframes slide {
