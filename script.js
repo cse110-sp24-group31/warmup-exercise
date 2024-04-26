@@ -88,3 +88,12 @@ function updateDeleteSelect(){
     })
 }
 
+function resetTaskList(){
+    const tasksContainer = document.querySelectorAll('.task-list ul');
+    
+    tasksContainer.forEach(ul => {
+        ul.innerHTML = '';
+    })
+
+    console.log("Task list has been reset.");
+}

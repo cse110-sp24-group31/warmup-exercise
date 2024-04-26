@@ -67,7 +67,8 @@
                         <select id="task-del" name="task-del">
                         </select><br>
                         <div style="text-align: center;">
-                            <input type="submit" value="Delete">
+                            <input type="submit" value="Delete"><br><br>    
+                            <button id="resetbutton" onclick="if (confirm('Are you sure?')) resetTaskList()" onclick="resetTaskList()">Remove All Tasks</button>
                         </div>
                     </fieldset>
                 </form>
