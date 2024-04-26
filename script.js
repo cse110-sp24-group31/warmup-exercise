@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             alert('Please enter a task description.');
             return;
         }
-
      
         const taskItem = document.createElement('li');
         taskItem.textContent = taskDesc;
@@ -39,9 +38,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const taskList = document.getElementById(`${taskType}-tasks`).querySelector('ul');
         taskList.appendChild(taskItem);
 
+        updateDeleteSelect();
     
         document.getElementById('task').value = '';
     });
 });
 
+//Update the select element when you change Task Type in the delete section
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('select#task-type-del').addEventListener('change', function(e) {
+        updateDeleteSelect();
+    })
+});
+
+//Delete selected task
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('form#delete').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const taskType = document.getElementById('task-type-del').value;
+        const tasks = document.getElementById(`${taskType}-tasks`).querySelector('ul').querySelectorAll('li');
+
+        const taskToDelete = document.getElementById('task-del').value;
+
+        tasks.forEach(li => {
+            if (li.textContent === taskToDelete) {
+                li.remove();
+            }
+        });
+
+        updateDeleteSelect();
+    })
+});
+
+function updateDeleteSelect(){
+    const taskType = document.getElementById('task-type-del').value;
+    const taskDesc = document.getElementById('task-del');
+    
+    const taskList = document.getElementById(`${taskType}-tasks`).querySelector('ul');
+
+    taskDesc.innerHTML = '';
+
+    taskList.querySelectorAll('li').forEach(task => {
+        const option = document.createElement('option');
+        option.value = task.textContent;
+        option.textContent = task.textContent;
+
+        taskDesc.appendChild(option);
+    })
+}
 
