@@ -1,3 +1,14 @@
+
+let tasks = [];
+
+async function fetchTasks() {
+    try {
+        const response = await fetch('tasks.json'); // Fetch JSON file
+        tasks = await response.json(); // Parse JSON response
+        displayTasks(tasks); // Display tasks
+    } catch (error) {
+        console.error('Error fetching tasks:', error);
+    }
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('input[name="category"]').forEach(checkbox => {
         checkbox.addEventListener('change', function() {
@@ -50,5 +61,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
         document.getElementById('task').value = '';
     });
+}
+
+function deleteTask(taskName){
+    tasks = tasks.filter(task => task.name != taskName);
+    displayTasks(tasks);
+}
 });
 

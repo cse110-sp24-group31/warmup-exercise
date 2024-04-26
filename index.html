@@ -59,9 +59,23 @@
                         <div style="text-align: center;">
                             <input type="submit" value="Submit">
                         </div>
+                        
                     </fieldset>
                 </form>
         </aside>
+        <aside>
+            <form class="delete-task">
+            <fieldset class="delete-task">
+                <legend style="font-size: 20px;">Delete Task</legend>
+                <label for="delete-task">Select Task to Delete:</label><br>
+                <textarea id="delete-task" name="delete-task" rows="5" cols="20" style="background-color: lightblue;"></textarea><br>
+                <div style="text-align: center;">
+                    <button type="delete-button" onclick="deleteSelectedTask(event)">Delete Task</button>
+                </div>
+            </fieldset>
+        </form>
+        </aside>
+ 
     </div>
     
     <!-- Tasks Section -->
@@ -84,13 +98,25 @@
 </div>
 
 
+
 <script>
     // Attach event listener to category checkboxes
     document.querySelectorAll('input[name="category"]').forEach(checkbox => {
         checkbox.addEventListener('change', fetchTasks);
     });
-    
+
     fetchTasks();
+</script>
+
+<script>
+    // Function to delete a task based on the content of the textarea
+    function deleteSelectedTask() {
+        event.preventDefault();
+
+        var taskName = document.getElementById('delete-task').value;
+
+        deleteTask(taskName);
+    }
 </script>
 </body>
 </html>

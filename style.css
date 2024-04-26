@@ -22,15 +22,34 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 form{
-  flex: 0 0 15%;
-  background-color: #F7E0AC;
-  border: 2px solid darkblue;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-  margin: 3px;
+/* Styles for the Delete Task Fieldset */
+.delete-task{
+flex: 0 0 15%;
+background-color: #F7E0AC; 
+border: 2px solid darkblue; 
+color: #333; 
+border-radius: 10px;
+padding: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+margin: 3px;
 }
+
+aside fieldset button {
+background-color: #e60000; 
+color: white;
+padding: 8px 16px;
+border-radius: 5px; 
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+aside fieldset button:hover {
+background-color: #cc0000; 
+}
+
 /* Styles for Categories */
 .categories {
   flex: 0 0 15%; 
@@ -59,6 +78,9 @@ form{
 /* Styles for Task List */
 .task-list {
   flex: 1;
+
+.task {
+  margin-bottom: 10px;
   background-color: #FCD4A1; 
   border: 2px solid black; 
   border-radius: 10px; 
@@ -152,7 +174,7 @@ body {
   transform:translate(-50%, -50%);
 }
 
-
+h1 {
 .categories label[for="category-Work"] {
   color: #FF6347; 
 }
