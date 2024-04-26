@@ -29,5 +29,5 @@ We chose to develop a Task List widget, designed to manage entries in a journal 
 Strengths: Flexible, streamlined visualization, customizable, user friendly <br/>
 Weakness: Can only represent 1 week up to 512 tasks simultaneously. <br/>
 Opportunity: Could become a competitive app on the market and can also popularize these features in task managers <br/>
-Threat: People could add too many tasks and eventually crash the app. To resolve this, we set a limit on the number of tasks to 512 only. <br/>
+Threat: People could add too many tasks and eventually crash the app.<br/>
 
