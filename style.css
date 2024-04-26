@@ -62,10 +62,15 @@ form{
     padding: 10px; /* Add padding for spacing */
     min-height: 800px;
     margin-right: 20px; /* Add margin for spacing */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .task {
     margin-bottom: 10px;
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
