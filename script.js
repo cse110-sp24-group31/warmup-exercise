@@ -1,7 +1,9 @@
+let tasks = [];
+
 async function fetchTasks() {
     try {
         const response = await fetch('tasks.json'); // Fetch JSON file
-        const tasks = await response.json(); // Parse JSON response
+        tasks = await response.json(); // Parse JSON response
         displayTasks(tasks); // Display tasks
     } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -28,4 +30,9 @@ function displayTasks(tasks) {
         taskElement.textContent = task.name;
         tasksContainer.appendChild(taskElement);
     });
+}
+
+function deleteTask(taskName){
+    tasks = tasks.filter(task => task.name != taskName);
+    displayTasks(tasks);
 }
