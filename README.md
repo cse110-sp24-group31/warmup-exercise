@@ -26,8 +26,8 @@ We chose to develop a Task List widget, designed to manage entries in a journal 
 - **Team Collaboration**: Enhanced our ability to work effectively as a team, distributing tasks based on individual strengths.
 
 # SWOT Analysis
-Strengths: Flexible, streamlined visualization, customizable, user friendly <br/>
-Weakness: Can only represent 1 week up to 512 tasks simultaneously. <br/>
-Opportunity: Could become a competitive app on the market and can also popularize these features in task managers <br/>
-Threat: People could add too many tasks and eventually crash the app.<br/>
+Strengths: The widget is extremely user friendly, as it utilizes primarily basic functions. It is also very flexible and streamlined, utilizing a more minimalistic view to not overwhelm the user.  <br/>
+Weakness: The drawback is that it can only represent 1 week worth of tasks and must be within  512 tasks to simultaneously all tasks for the week. <br/>
+Opportunity: This could become a competitive app on the market due to its ease of use and avoidance of bloatware features. The introduction and potential popukarity of this app can also popularize the features implemented in this task list for all competitive task lists. <br/>
+Threat: A potential threat we came across while development was that people could add too many tasks and eventually crash the app. <br/>
 
